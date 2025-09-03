@@ -1,18 +1,19 @@
 ﻿using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEngine.GraphicsBuffer;
 
 
 public class PlayerController : MonoBehaviour
 {
     [HideInInspector] public PlayerBaseNou player;
 
-    protected Vector2 moveInput;
-    [SerializeField] protected float mediumThreshold = 0.7f;
+    private PlayerInput playerInput;
+
 
     private void Awake()
     {
-        // Asigură-te că referința e mereu corectă la instanțiere
+        playerInput = GetComponent<PlayerInput>();
         player = GetComponent<PlayerBaseNou>();
         if (player == null)
         {
@@ -23,64 +24,41 @@ public class PlayerController : MonoBehaviour
             UnityEngine.Debug.Log($"[{gameObject.name}] PlayerBase component found: {player.GetType().Name}", this);
         }
 
-        player.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
-
-
         UnityEngine.Debug.Log($"PlayerController AWAKE on {gameObject.name}");
+
+        playerInput.actions["Taunt"].performed += OnTaunt;
+        playerInput.actions["BlockLeft"].performed += OnBlockLeft;
+        playerInput.actions["BlockRight"].performed += OnBlockRight;
+        playerInput.actions["BlockCenter"].performed += OnBlockCenter;
+        playerInput.actions["JabLeft"].performed += OnJabLeft;
+        playerInput.actions["JabRight"].performed += OnJabRight;
+        playerInput.actions["UppercutLeft"].performed += OnUppercutLeft;
+        playerInput.actions["UppercutRight"].performed += OnUppercutRight;
+        playerInput.actions["CrossLeft"].performed += OnCrossLeft;
+        playerInput.actions["CrossRight"].performed += OnCrossRight;
+
     }
 
     private void OnEnable()
     {
-        // Asigură-te că referința nu se pierde la reactivare
         if (player == null)
             player = GetComponent<PlayerBaseNou>();
     }
 
-    public void OnMove(InputAction.CallbackContext context)
+    /*public void pozitionCorrection()
     {
-        UnityEngine.Debug.Log($"[{gameObject.name}] OnMove - player: {player} ({(player != null ? player.GetType().Name : "NULL")})", this);
-        moveInput = context.ReadValue<Vector2>();
-        HandleMovement();
-    }
+        Vector3 pos = transform.position;
+        transform.position = new Vector3(pos.x, 1.75f, pos.z);
 
-    /*public void OnPivotLeft(InputAction.CallbackContext context)
-    {
-
-        UnityEngine.Debug.Log($"[{gameObject.name}] OnPivotLeft - player: {player} ({(player != null ? player.GetType().Name : "NULL")})", this);
-        if (context.performed)
-            player.TryPlayAction(player.GetPivotLeft(), player.GetPivotStamina());
-        
-    }*/
-
-    public void OnPivotLeft(InputAction.CallbackContext context)
-    {
-
-        UnityEngine.Debug.Log($"[{gameObject.name}] OnPivotLeft - player: {player} ({(player != null ? player.GetType().Name : "NULL")})", this);
-        if (context.performed)
-            if (player.TryPlayAction(player.GetPivotLeft(), player.GetPivotStamina())) { transform.Rotate(0, -90, 0); }
-
-
-    }
-
-    /*public void OnPivotRight(InputAction.CallbackContext context)
-    {
-        UnityEngine.Debug.Log($"[{gameObject.name}] OnPivotRight - player: {player} ({(player != null ? player.GetType().Name : "NULL")})", this);
-        if (context.performed)
-            player.TryPlayAction(player.GetPivotRight(), player.GetPivotStamina());
     } */
 
-    public void OnPivotRight(InputAction.CallbackContext context)
-    {
-        UnityEngine.Debug.Log($"[{gameObject.name}] OnPivotRight - player: {player} ({(player != null ? player.GetType().Name : "NULL")})", this);
-        if (context.performed)
-           if( player.TryPlayAction(player.GetPivotRight(), player.GetPivotStamina())) { transform.Rotate(0, +90, 0); }
-    }
 
     public void OnTaunt(InputAction.CallbackContext context)
     {
         UnityEngine.Debug.Log($"[{gameObject.name}] OnTaunt - player: {player} ({(player != null ? player.GetType().Name : "NULL")})", this);
         if (context.performed)
             player.TryPlayAction(player.GetTaunt(), player.GetTauntStamina());
+        //pozitionCorrection();
     }
 
     public void OnBlockLeft(InputAction.CallbackContext context)
@@ -88,6 +66,7 @@ public class PlayerController : MonoBehaviour
         UnityEngine.Debug.Log($"[{gameObject.name}] OnBlockLeft - player: {player} ({(player != null ? player.GetType().Name : "NULL")})", this);
         if (context.performed)
             player.TryPlayAction(player.GetBlockLeft(), player.GetBlockStamina());
+        //pozitionCorrection();
     }
 
 
@@ -103,73 +82,37 @@ public class PlayerController : MonoBehaviour
         UnityEngine.Debug.Log($"[{gameObject.name}] OnBlockCenter - player: {player} ({(player != null ? player.GetType().Name : "NULL")})", this);
         if (context.performed)
             player.TryPlayAction(player.GetBlockCenter(), player.GetBlockStamina());
+
     }
 
     public void OnJabLeft(InputAction.CallbackContext context)
     {
-        UnityEngine.Debug.Log($"[{gameObject.name}] OnJabLeft - player: {player} ({(player != null ? player.GetType().Name : "NULL")})", this);
-        if (context.performed)
-            player.TryPlayAction(player.GetJabLeft(), player.GetJabStamina());
+        if (context.performed) player.TryPlayJab(player.GetJabLeft(), player.GetJabStamina());
     }
 
     public void OnJabRight(InputAction.CallbackContext context)
     {
-        UnityEngine.Debug.Log($"[{gameObject.name}] OnJabRight - player: {player} ({(player != null ? player.GetType().Name : "NULL")})", this);
-        if (context.performed)
-            player.TryPlayAction(player.GetJabRight(), player.GetJabStamina());
+        if (context.performed) player.TryPlayJab(player.GetJabRight(), player.GetJabStamina());
     }
 
     public void OnUppercutLeft(InputAction.CallbackContext context)
     {
-        UnityEngine.Debug.Log($"[{gameObject.name}] OnUppercutLeft - player: {player} ({(player != null ? player.GetType().Name : "NULL")})", this);
-        if (context.performed)
-            player.TryPlayAction(player.GetUppercutLeft(), player.GetUppercutStamina());
+        if (context.performed) player.TryPlayUppercut(player.GetUppercutLeft(), player.GetUppercutStamina());
     }
 
     public void OnUppercutRight(InputAction.CallbackContext context)
     {
-        UnityEngine.Debug.Log($"[{gameObject.name}] OnUppercutRight - player: {player} ({(player != null ? player.GetType().Name : "NULL")})", this);
-        if (context.performed)
-            player.TryPlayAction(player.GetUppercutRight(), player.GetUppercutStamina());
+        if (context.performed) player.TryPlayUppercut(player.GetUppercutRight(), player.GetUppercutStamina());
     }
 
     public void OnCrossLeft(InputAction.CallbackContext context)
     {
-        UnityEngine.Debug.Log($"[{gameObject.name}] OnCrossLeft - player: {player} ({(player != null ? player.GetType().Name : "NULL")})", this);
-        if (context.performed)
-            player.TryPlayAction(player.GetCrossLeft(), player.GetCrossStamina());
+        if (context.performed) player.TryPlayCross(player.GetCrossLeft(), player.GetCrossStamina());
     }
 
     public void OnCrossRight(UnityEngine.InputSystem.InputAction.CallbackContext context) 
     {
-        if (context.performed)
-            player.TryPlayAction(player.GetCrossRight(), player.GetCrossStamina()); 
-    }
+        if (context.performed) player.TryPlayCross(player.GetCrossRight(), player.GetCrossStamina());
 
-    /*public void OnCrossRight(InputAction.CallbackContext context)
-    {
-        Debug.Log("CALLED OnCrossRight!!!", this);
-        Debug.Log($"[{gameObject.name}] OnCrossRight - player: {player} ({(player != null ? player.GetType().Name : "NULL")})", this);
-        if (context.performed)
-            player.TryPlayAction(player.GetCrossRight(), player.GetCrossStamina());
-    }*/
-
-    protected void HandleMovement()
-    {
-        UnityEngine.Debug.Log($"[{gameObject.name}] HandleMovement - player: {player} ({(player != null ? player.GetType().Name : "NULL")})", this);
-        float magnitude = moveInput.magnitude;
-        if (magnitude < 0.1f) return;
-
-        float angle = Mathf.Atan2(moveInput.x, moveInput.y) * Mathf.Rad2Deg;
-        if (angle < 0) angle += 360;
-
-        if (angle >= 315 || angle <= 45)
-            player.TryPlayAction(player.GetShortStepForward(), player.GetShortStepStamina());
-        if (angle > 45 && angle <= 135)
-            player.TryPlayAction(player.GetShortStepRight(), player.GetShortStepStamina());
-        if (angle > 135 && angle <= 225)
-            player.TryPlayAction(player.GetShortStepBack(), player.GetShortStepStamina());
-        if (angle > 225 && angle <= 315)
-            player.TryPlayAction(player.GetShortStepLeft(), player.GetShortStepStamina());
     }
 }

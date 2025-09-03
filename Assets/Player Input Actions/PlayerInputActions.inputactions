@@ -193,7 +193,7 @@
                 {
                     "name": "binding",
                     "id": "58768629-45a7-423f-8483-24ea5c1338d2",
-                    "path": "<Gamepad>/dpad/y",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": ";GamepadScheme",
@@ -248,7 +248,7 @@
                 {
                     "name": "",
                     "id": "5fcaacb5-ed5f-411b-8f02-2d9115cfa9f0",
-                    "path": "<Gamepad>/buttonWest",
+                    "path": "<Gamepad>/dpad/up",
                     "interactions": "",
                     "processors": "",
                     "groups": ";GamepadScheme",

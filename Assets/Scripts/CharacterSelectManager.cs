@@ -19,13 +19,13 @@ public class CharacterSelectManager : MonoBehaviour
 
     private void Start()
     {
-        player1 = Instantiate(BoxerMenuPrefabs[0], player1SpawnPoint.position, player1SpawnPoint.rotation);
+        player1 = Instantiate(BoxerMenuPrefabs[1], player1SpawnPoint.position, player1SpawnPoint.rotation);
 
-        player2 = Instantiate(BoxerMenuPrefabs[1], player2SpawnPoint.position, player2SpawnPoint.rotation);
+        player2 = Instantiate(BoxerMenuPrefabs[2], player2SpawnPoint.position, player2SpawnPoint.rotation);
 
-        player3 = Instantiate(BoxerMenuPrefabs[2], player3SpawnPoint.position, player3SpawnPoint.rotation);
+        player3 = Instantiate(BoxerMenuPrefabs[3], player3SpawnPoint.position, player3SpawnPoint.rotation);
 
-        player4 = Instantiate(BoxerMenuPrefabs[3], player4SpawnPoint.position, player4SpawnPoint.rotation);
+        player4 = Instantiate(BoxerMenuPrefabs[4], player4SpawnPoint.position, player4SpawnPoint.rotation);
     }
 
 

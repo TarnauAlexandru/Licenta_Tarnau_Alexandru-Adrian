@@ -20,13 +20,10 @@ public class HeavyweightPlayer : PlayerBaseNou
     public override string GetUppercutRight() => "Uppercut Right";
     public override string GetCrossLeft() => "Cross Left";
     public override string GetCrossRight() => "Cross Right";
-    public override string GetShortStepForward() => "Short Step Forward";
-    public override string GetShortStepBack() => "Short Step Backward";
-    public override string GetShortStepLeft() => "Short Left Side Step";
-    public override string GetShortStepRight() => "Short Right Side Step";
-    public override string GetMediumStepForward() => "Medium Step Forward";
-    public override string GetMediumStepLeft() => "Medium Left Sidestep";
-    public override string GetMediumStepRight() => "Medium Right Sidestep";
+    public override string GetStepForward() => "Step Forward";
+    public override string GetStepBack() => "Step Backward";
+    public override string GetStepLeft() => "Left Side Step";
+    public override string GetStepRight() => "Right Side Step";
     public override string GetTaunt() => "Taunt";
     public override string GetRecieveaBigRightCrosstotheFace() => "Recieve a Big Right Cross to the Face";
     public override string GetRecieveaSmallRightCrosstotheFace() => "Recieve a Small Right Cross to the Face";
@@ -40,7 +37,6 @@ public class HeavyweightPlayer : PlayerBaseNou
     public override float GetCrossStamina() => 17f;
     public override float GetBlockStamina() => 7f;
     public override float GetPivotStamina() => 7f;
-    public override float GetShortStepStamina() => 1f;
-    public override float GetMediumStepStamina() => 3f;
+    public override float GetStepStamina() => 0f;
     public override float GetTauntStamina() => 1f;
 }

@@ -393,6 +393,7 @@ GameObject:
   m_Component:
   - component: {fileID: 227419436}
   - component: {fileID: 227419437}
+  - component: {fileID: 227419438}
   m_Layer: 5
   m_Name: MenuManager
   m_TagString: Untagged
@@ -431,6 +432,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b89c12b43577e746a5aebb6adef3b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &227419438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227419434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfdabba682383c941bc09f0cb4f30eab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BoxerMenuPrefabs:
+  - {fileID: 4532883186036902989, guid: d7a3db5ea8e28664a842fc0da245b294, type: 3}
+  - {fileID: 4825337006292849096, guid: c351ecaf8f2ced541ac3e4f477acb1de, type: 3}
+  - {fileID: 7874240962194084910, guid: e87322e40c0db884daf769f958554b2f, type: 3}
+  - {fileID: 2183812321159470997, guid: 9e0c20b7192ab584cad5d47b9f8a935b, type: 3}
+  - {fileID: 2972043624938470820, guid: dbe7042d8403b304b926078504f87c37, type: 3}
+  player1SpawnPoint: {fileID: 2134509456}
+  player2SpawnPoint: {fileID: 1816832293}
+  player3SpawnPoint: {fileID: 1588721277}
+  player4SpawnPoint: {fileID: 1411806308}
 --- !u!1 &331965090
 GameObject:
   m_ObjectHideFlags: 0
@@ -3069,22 +3092,26 @@ PrefabInstance:
       objectReference: {fileID: 4649670284224015520, guid: c351ecaf8f2ced541ac3e4f477acb1de, type: 3}
     - target: {fileID: 1970142228783986433, guid: c0b216b641cc0614a84b37b01677f5ff, type: 3}
       propertyPath: BoxerMenuPrefabs.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1970142228783986433, guid: c0b216b641cc0614a84b37b01677f5ff, type: 3}
       propertyPath: 'BoxerMenuPrefabs.Array.data[0]'
       value: 
-      objectReference: {fileID: 4825337006292849096, guid: c351ecaf8f2ced541ac3e4f477acb1de, type: 3}
+      objectReference: {fileID: 4532883186036902989, guid: d7a3db5ea8e28664a842fc0da245b294, type: 3}
     - target: {fileID: 1970142228783986433, guid: c0b216b641cc0614a84b37b01677f5ff, type: 3}
       propertyPath: 'BoxerMenuPrefabs.Array.data[1]'
       value: 
-      objectReference: {fileID: 7874240962194084910, guid: e87322e40c0db884daf769f958554b2f, type: 3}
+      objectReference: {fileID: 4825337006292849096, guid: c351ecaf8f2ced541ac3e4f477acb1de, type: 3}
     - target: {fileID: 1970142228783986433, guid: c0b216b641cc0614a84b37b01677f5ff, type: 3}
       propertyPath: 'BoxerMenuPrefabs.Array.data[2]'
       value: 
-      objectReference: {fileID: 2183812321159470997, guid: 9e0c20b7192ab584cad5d47b9f8a935b, type: 3}
+      objectReference: {fileID: 7874240962194084910, guid: e87322e40c0db884daf769f958554b2f, type: 3}
     - target: {fileID: 1970142228783986433, guid: c0b216b641cc0614a84b37b01677f5ff, type: 3}
       propertyPath: 'BoxerMenuPrefabs.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2183812321159470997, guid: 9e0c20b7192ab584cad5d47b9f8a935b, type: 3}
+    - target: {fileID: 1970142228783986433, guid: c0b216b641cc0614a84b37b01677f5ff, type: 3}
+      propertyPath: 'BoxerMenuPrefabs.Array.data[4]'
       value: 
       objectReference: {fileID: 2972043624938470820, guid: dbe7042d8403b304b926078504f87c37, type: 3}
     - target: {fileID: 1970142228783986433, guid: c0b216b641cc0614a84b37b01677f5ff, type: 3}

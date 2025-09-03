@@ -20,7 +20,7 @@ public class AIPlayerController : MonoBehaviour
         var rb = player.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+           /* rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ; */
         }
 
         StartCoroutine(AIThinkLoop());
@@ -53,23 +53,23 @@ public class AIPlayerController : MonoBehaviour
         {
             if (UnityEngine.Random.value < 0.5f)
             {
-                player.TryPlayAction(player.GetShortStepForward(), player.GetShortStepStamina());
+                player.AITryPlayAction(player.GetStepForward(), player.GetStepStamina());
             }
             else
             {
                 // Pivot logic with rotation
                 if (UnityEngine.Random.value < 0.5f)
                 {
-                    if (player.TryPlayAction(player.GetPivotLeft(), player.GetPivotStamina()))
+                    if (player.AITryPlayAction(player.GetPivotLeft(), player.GetPivotStamina()))
                     {
-                        transform.Rotate(0, -90, 0);
+                        //transform.Rotate(0, -90, 0);
                     }
                 }
                 else
                 {
-                    if (player.TryPlayAction(player.GetPivotRight(), player.GetPivotStamina()))
+                    if (player.AITryPlayAction(player.GetPivotRight(), player.GetPivotStamina()))
                     {
-                        transform.Rotate(0, 90, 0);
+                        //transform.Rotate(0, 90, 0);
                     }
                 }
             }
@@ -81,7 +81,7 @@ public class AIPlayerController : MonoBehaviour
         if (r < 0.35f)
         {
             string jab = (UnityEngine.Random.value < 0.5f) ? player.GetJabLeft() : player.GetJabRight();
-            player.TryPlayAction(jab, player.GetJabStamina());
+            player.AITryPlayAction(jab, player.GetJabStamina());
 
             if (UnityEngine.Random.value < 0.25f)
             {
@@ -91,32 +91,32 @@ public class AIPlayerController : MonoBehaviour
         else if (r < 0.55f)
         {
             string up = (UnityEngine.Random.value < 0.5f) ? player.GetUppercutLeft() : player.GetUppercutRight();
-            player.TryPlayAction(up, player.GetUppercutStamina());
+            player.AITryPlayAction(up, player.GetUppercutStamina());
         }
         else if (r < 0.65f)
         {
             float b = UnityEngine.Random.value;
-            if (b < 0.33f) player.TryPlayAction(player.GetBlockLeft(), player.GetBlockStamina());
-            else if (b < 0.66f) player.TryPlayAction(player.GetBlockCenter(), player.GetBlockStamina());
-            else player.TryPlayAction(player.GetBlockRight(), player.GetBlockStamina());
+            if (b < 0.33f) player.AITryPlayAction(player.GetBlockLeft(), player.GetBlockStamina());
+            else if (b < 0.66f) player.AITryPlayAction(player.GetBlockCenter(), player.GetBlockStamina());
+            else player.AITryPlayAction(player.GetBlockRight(), player.GetBlockStamina());
         }
         else if (r < 0.8f)
         {
-            player.TryPlayAction(UnityEngine.Random.value < 0.5f ? player.GetCrossLeft() : player.GetCrossRight(), player.GetCrossStamina());
+            player.AITryPlayAction(UnityEngine.Random.value < 0.5f ? player.GetCrossLeft() : player.GetCrossRight(), player.GetCrossStamina());
         }
         else
         {
             // Pivot logic with rotation
             if (UnityEngine.Random.value < 0.5f)
             {
-                if (player.TryPlayAction(player.GetPivotLeft(), player.GetPivotStamina()))
+                if (player.AITryPlayAction(player.GetPivotLeft(), player.GetPivotStamina()))
                 {
                     transform.Rotate(0, -90, 0);
                 }
             }
             else
             {
-                if (player.TryPlayAction(player.GetPivotRight(), player.GetPivotStamina()))
+                if (player.AITryPlayAction(player.GetPivotRight(), player.GetPivotStamina()))
                 {
                     transform.Rotate(0, 90, 0);
                 }

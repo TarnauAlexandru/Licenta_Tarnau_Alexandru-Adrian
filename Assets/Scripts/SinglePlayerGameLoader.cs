@@ -1,12 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SinglePlayerGameLoader : MonoBehaviour
 {
-    public List<GameObject> BoxerPlayerPrefabs; // Player1-4 (din Player_Caracters)
-    public List<GameObject> BoxerCPUPrefabs;    // CPU1-4 (din CPU_Caracters)
+    public List<GameObject> BoxerPlayerPrefabs; 
+    public List<GameObject> BoxerCPUPrefabs;    
     public Transform playerSpawnPoint;
     public Transform cpuSpawnPoint;
+    [SerializeField] private HUDControllerMicroBar hud;
 
     void Start()
     {
@@ -17,16 +19,17 @@ public class SinglePlayerGameLoader : MonoBehaviour
         if (playerIndex > 0 && playerIndex < BoxerPlayerPrefabs.Count)
         {
             player = Instantiate(BoxerPlayerPrefabs[playerIndex], playerSpawnPoint.position, playerSpawnPoint.rotation);
-            // Nu mai e nevoie să setezi manual referința la player în controller!
         }
         else
         {
             Debug.LogWarning("Player index invalid!");
         }
 
+        GameObject cpu = null;
+
         if (cpuIndex > 0 && cpuIndex < BoxerCPUPrefabs.Count)
         {
-            GameObject cpu = Instantiate(BoxerCPUPrefabs[cpuIndex], cpuSpawnPoint.position, cpuSpawnPoint.rotation);
+            cpu = Instantiate(BoxerCPUPrefabs[cpuIndex], cpuSpawnPoint.position, cpuSpawnPoint.rotation);
 
             var aiCtrl = cpu.GetComponent<AIPlayerController>();
             if (aiCtrl != null && player != null)
@@ -36,5 +39,16 @@ public class SinglePlayerGameLoader : MonoBehaviour
         {
             Debug.LogWarning("CPU index invalid!");
         }
+
+        var p1 = player ? player.GetComponent<PlayerBaseNou>() : null;
+        var p2 = cpu ? cpu.GetComponent<PlayerBaseNou>() : null;
+        hud.Bind(p1, p2);
+
+        p2.opponent = p1; 
+
+        if (p1 == null) p1.SetSpawnIndex(playerIndex);
+        if (p2 == null) p2.SetSpawnIndex(cpuIndex);
+
+        
     }
 }

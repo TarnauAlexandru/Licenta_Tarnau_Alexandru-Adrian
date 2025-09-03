@@ -11,10 +11,10 @@ TagManager:
   - MenuPreview
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Block
+  - Hurtbox_Torso
+  - Hurtbox_Head
+  - Hitbox_fist
   - 
   - 
   - 

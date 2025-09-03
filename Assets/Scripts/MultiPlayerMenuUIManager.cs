@@ -7,6 +7,7 @@ public class MultiPlayerMenuUIManager: MonoBehaviour
     public Transform player1SpawnPoint;
     public Transform player2SpawnPoint;
 
+
     void Start()
     {
         int p1Index = MenuManager.player1Index;

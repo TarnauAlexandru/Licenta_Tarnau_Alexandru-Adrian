@@ -18,7 +18,15 @@ public class MenuBoxerBase : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    public void SetWinner()
+    {
+        animator.SetTrigger("Victory");
+    }
 
+    public void SetLoser() 
+    {
+        animator.SetTrigger("Defeat");
+    }
 
     public virtual string GetTauntAnimation() => "Taunt";
     public virtual string GetIdleAnimation() => "Idle";

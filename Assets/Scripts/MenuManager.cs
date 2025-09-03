@@ -10,8 +10,8 @@ public class MenuManager : MonoBehaviour
     public static int selectingPlayer = 1; // cine selectează acum
     public static int playerIndex = 0; // index boxer Player
     public static int cpuIndex = 0;    // index boxer CPU
-    public static string selectingSlot = ""; // "Player" sau "CPU"
-    public static string returnMenu = "";    // "SinglePlayer_Menu"
+    public static string selectingSlot = ""; 
+    public static string returnMenu = "";    
 
     // Navigare
     public void GoToCharacterSelect(int player)
@@ -57,7 +57,14 @@ public class MenuManager : MonoBehaviour
             cpuPanelUI.UpdateStats(listaBoxeri[MenuManager.cpuIndex]);
     }*/
 
-    public void GoToMainMenu() { SceneManager.LoadScene("MainMenu"); } 
+    public void GoToMainMenu() 
+    { 
+        SceneManager.LoadScene("MainMenu");
+        player1Index = 0;
+        player2Index = 0;
+        playerIndex = 0;
+        cpuIndex = 0;
+    } 
     public void GoToSinglePlayerMenu() { SceneManager.LoadScene("SinglePlayer_Menu"); }
     public void GoToMultiPlayerMenu() { SceneManager.LoadScene("MultiPlayer_Menu"); }
     public void StartGame() { SceneManager.LoadScene("GameScene"); }
@@ -65,8 +72,8 @@ public class MenuManager : MonoBehaviour
 
     public void GoToChoosePlayer(string menu, string slot)
     {
-        MenuManager.returnMenu = menu; // "SinglePlayer_Menu" sau "MultiPlayer_Menu"
-        MenuManager.selectingSlot = slot; // "Player" sau "CPU"
+        returnMenu = menu;
+        selectingSlot = slot;
         SceneManager.LoadScene("ChosePlayer");
     }
 
@@ -92,29 +99,26 @@ public class MenuManager : MonoBehaviour
 
     public void StartSinglePlayerGame()
     {
-        // Verifică dacă ambele caractere au fost selectate
-        if (playerIndex != -1 && cpuIndex != -1)
+        if (playerIndex != 0 && cpuIndex != 0)
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("SinglePlayer_Game");
         }
         else
         {
             UnityEngine.Debug.LogWarning("Selectează atât Player cât și CPU înainte de a începe jocul!");
-            // Aici poți adăuga și un mesaj UI pentru utilizator, dacă vrei
         }
     }
 
     public void StartMultiPlayerGame()
     {
         
-        if (player1Index != -1 && player2Index != -1)
+        if (player1Index != 0 && player2Index != 0)
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("MultiPlayer_Game");
         }
         else
         {
             UnityEngine.Debug.LogWarning("Selectează atât Player1 cât și Player2 înainte de a începe jocul!");
-            // Aici poți adăuga și un mesaj UI pentru utilizator, dacă vrei
         }
     }
 }

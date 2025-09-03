@@ -101,7 +101,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Jab Right"",
+                    ""name"": ""JabRight"",
                     ""type"": ""Button"",
                     ""id"": ""394b8e40-e1be-4d5f-9047-58cea76d39a6"",
                     ""expectedControlType"": """",
@@ -110,7 +110,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Jab Left"",
+                    ""name"": ""JabLeft"",
                     ""type"": ""Button"",
                     ""id"": ""3197dd4b-795d-40fe-aad5-57342b619eef"",
                     ""expectedControlType"": """",
@@ -119,7 +119,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Uppercut Right"",
+                    ""name"": ""UppercutRight"",
                     ""type"": ""Button"",
                     ""id"": ""eb4e86fa-a801-4e02-b113-5f22dfcc1c2e"",
                     ""expectedControlType"": """",
@@ -128,7 +128,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Uppercut Left"",
+                    ""name"": ""UppercutLeft"",
                     ""type"": ""Button"",
                     ""id"": ""b379c51a-8014-4a20-b409-4979e65a3428"",
                     ""expectedControlType"": """",
@@ -137,7 +137,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Cross Right"",
+                    ""name"": ""CrossRight"",
                     ""type"": ""Button"",
                     ""id"": ""1711637d-e56f-4191-b638-af2d2d8ad05f"",
                     ""expectedControlType"": """",
@@ -146,7 +146,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Cross Left"",
+                    ""name"": ""CrossLeft"",
                     ""type"": ""Button"",
                     ""id"": ""e2ae7172-3c81-4057-8326-305631f5059b"",
                     ""expectedControlType"": """",
@@ -155,7 +155,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Pivot Left"",
+                    ""name"": ""PivotLeft"",
                     ""type"": ""Button"",
                     ""id"": ""6d53cca0-a51a-443e-b0f3-1cc85d7c13ca"",
                     ""expectedControlType"": """",
@@ -164,7 +164,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Pivot Right"",
+                    ""name"": ""PivotRight"",
                     ""type"": ""Button"",
                     ""id"": ""b462720a-1bac-4ad0-b119-ef502fbf6bd3"",
                     ""expectedControlType"": """",
@@ -173,7 +173,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Block Right"",
+                    ""name"": ""BlockRight"",
                     ""type"": ""Button"",
                     ""id"": ""08fb155e-45a0-4650-9804-d2257e54eec1"",
                     ""expectedControlType"": """",
@@ -182,7 +182,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Block Left"",
+                    ""name"": ""BlockLeft"",
                     ""type"": ""Button"",
                     ""id"": ""d47bb599-b531-4d9d-a3d9-81c153c0b5e6"",
                     ""expectedControlType"": """",
@@ -191,7 +191,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Block Center"",
+                    ""name"": ""BlockCenter"",
                     ""type"": ""Button"",
                     ""id"": ""15cb2056-67d6-4fc5-bf5f-a9420091bd21"",
                     ""expectedControlType"": """",
@@ -228,7 +228,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Cross Right"",
+                    ""action"": ""CrossRight"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -239,7 +239,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";GamepadScheme"",
-                    ""action"": ""Cross Right"",
+                    ""action"": ""CrossRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -250,7 +250,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";GamepadScheme"",
-                    ""action"": ""Cross Right"",
+                    ""action"": ""CrossRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -261,7 +261,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Jab Right"",
+                    ""action"": ""JabRight"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -272,18 +272,18 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";GamepadScheme"",
-                    ""action"": ""Jab Right"",
+                    ""action"": ""JabRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""binding"",
                     ""id"": ""58768629-45a7-423f-8483-24ea5c1338d2"",
-                    ""path"": ""<Gamepad>/dpad/y"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";GamepadScheme"",
-                    ""action"": ""Jab Right"",
+                    ""action"": ""JabRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -294,7 +294,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Uppercut Right"",
+                    ""action"": ""UppercutRight"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -305,7 +305,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";GamepadScheme"",
-                    ""action"": ""Uppercut Right"",
+                    ""action"": ""UppercutRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -316,7 +316,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";GamepadScheme"",
-                    ""action"": ""Uppercut Right"",
+                    ""action"": ""UppercutRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -327,14 +327,14 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";GamepadScheme"",
-                    ""action"": ""Block Center"",
+                    ""action"": ""BlockCenter"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""5fcaacb5-ed5f-411b-8f02-2d9115cfa9f0"",
-                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""path"": ""<Gamepad>/dpad/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";GamepadScheme"",
@@ -349,7 +349,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";GamepadScheme"",
-                    ""action"": ""Block Left"",
+                    ""action"": ""BlockLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -360,7 +360,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";GamepadScheme"",
-                    ""action"": ""Block Right"",
+                    ""action"": ""BlockRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -371,7 +371,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Cross Left"",
+                    ""action"": ""CrossLeft"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -382,7 +382,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";GamepadScheme"",
-                    ""action"": ""Cross Left"",
+                    ""action"": ""CrossLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -393,7 +393,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";GamepadScheme"",
-                    ""action"": ""Cross Left"",
+                    ""action"": ""CrossLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -404,7 +404,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Jab Left"",
+                    ""action"": ""JabLeft"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -415,7 +415,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";GamepadScheme"",
-                    ""action"": ""Jab Left"",
+                    ""action"": ""JabLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -426,7 +426,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";GamepadScheme"",
-                    ""action"": ""Jab Left"",
+                    ""action"": ""JabLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -437,7 +437,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Uppercut Left"",
+                    ""action"": ""UppercutLeft"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -448,7 +448,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";GamepadScheme"",
-                    ""action"": ""Uppercut Left"",
+                    ""action"": ""UppercutLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -459,7 +459,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";GamepadScheme"",
-                    ""action"": ""Uppercut Left"",
+                    ""action"": ""UppercutLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -470,7 +470,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";GamepadScheme"",
-                    ""action"": ""Pivot Left"",
+                    ""action"": ""PivotLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -481,7 +481,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";GamepadScheme"",
-                    ""action"": ""Pivot Right"",
+                    ""action"": ""PivotRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -553,17 +553,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
-        m_Player_JabRight = m_Player.FindAction("Jab Right", throwIfNotFound: true);
-        m_Player_JabLeft = m_Player.FindAction("Jab Left", throwIfNotFound: true);
-        m_Player_UppercutRight = m_Player.FindAction("Uppercut Right", throwIfNotFound: true);
-        m_Player_UppercutLeft = m_Player.FindAction("Uppercut Left", throwIfNotFound: true);
-        m_Player_CrossRight = m_Player.FindAction("Cross Right", throwIfNotFound: true);
-        m_Player_CrossLeft = m_Player.FindAction("Cross Left", throwIfNotFound: true);
-        m_Player_PivotLeft = m_Player.FindAction("Pivot Left", throwIfNotFound: true);
-        m_Player_PivotRight = m_Player.FindAction("Pivot Right", throwIfNotFound: true);
-        m_Player_BlockRight = m_Player.FindAction("Block Right", throwIfNotFound: true);
-        m_Player_BlockLeft = m_Player.FindAction("Block Left", throwIfNotFound: true);
-        m_Player_BlockCenter = m_Player.FindAction("Block Center", throwIfNotFound: true);
+        m_Player_JabRight = m_Player.FindAction("JabRight", throwIfNotFound: true);
+        m_Player_JabLeft = m_Player.FindAction("JabLeft", throwIfNotFound: true);
+        m_Player_UppercutRight = m_Player.FindAction("UppercutRight", throwIfNotFound: true);
+        m_Player_UppercutLeft = m_Player.FindAction("UppercutLeft", throwIfNotFound: true);
+        m_Player_CrossRight = m_Player.FindAction("CrossRight", throwIfNotFound: true);
+        m_Player_CrossLeft = m_Player.FindAction("CrossLeft", throwIfNotFound: true);
+        m_Player_PivotLeft = m_Player.FindAction("PivotLeft", throwIfNotFound: true);
+        m_Player_PivotRight = m_Player.FindAction("PivotRight", throwIfNotFound: true);
+        m_Player_BlockRight = m_Player.FindAction("BlockRight", throwIfNotFound: true);
+        m_Player_BlockLeft = m_Player.FindAction("BlockLeft", throwIfNotFound: true);
+        m_Player_BlockCenter = m_Player.FindAction("BlockCenter", throwIfNotFound: true);
         m_Player_Taunt = m_Player.FindAction("Taunt", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
@@ -1009,77 +1009,77 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMove(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Jab Right" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "JabRight" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnJabRight(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Jab Left" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "JabLeft" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnJabLeft(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Uppercut Right" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "UppercutRight" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnUppercutRight(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Uppercut Left" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "UppercutLeft" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnUppercutLeft(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Cross Right" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "CrossRight" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnCrossRight(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Cross Left" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "CrossLeft" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnCrossLeft(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Pivot Left" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "PivotLeft" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnPivotLeft(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Pivot Right" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "PivotRight" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnPivotRight(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Block Right" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "BlockRight" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnBlockRight(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Block Left" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "BlockLeft" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnBlockLeft(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Block Center" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "BlockCenter" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />

@@ -12,7 +12,7 @@ public class HandHitDetector : MonoBehaviour
         {
             opponent.ReceiveHit(
                 attacker: owner,
-                hitSourceBone: handName,
+                //hitSourceBone: handName,
                 hitTargetBone: other.gameObject.name,
                 hitType: owner.GetCurrentAttackType(),
                 isCrit: false // sau logica ta de crit
