@@ -57,13 +57,53 @@ public class PlayerMovementController : MonoBehaviour
         float angle = Mathf.Atan2(moveInput.x, moveInput.y) * Mathf.Rad2Deg;
         if (angle < 0) angle += 360;
 
-        if (angle >= 315 || angle <= 45)
-            player.TryPlayMove(player.GetStepForward(), player.GetStepStamina());
-        else if (angle > 45 && angle <= 135)
-            player.TryPlayMove(player.GetStepRight(), player.GetStepStamina());
-        else if (angle > 135 && angle <= 225)
-            player.TryPlayMove(player.GetStepBack(), player.GetStepStamina());
-        else if (angle > 225 && angle <= 315)
-            player.TryPlayMove(player.GetStepLeft(), player.GetStepStamina());
+        float playerYRotation = transform.eulerAngles.y;
+        int playerYRotationRounded = Mathf.RoundToInt(playerYRotation / 90)%4 * 90;
+        switch(playerYRotationRounded)
+        {
+            case 0:
+                {
+                    if (angle >= 315 || angle <= 45)
+                        player.TryPlayMove(player.GetStepRight(), player.GetStepStamina()); //right
+                    else if (angle > 45 && angle <= 135)
+                        player.TryPlayMove(player.GetStepBack(), player.GetStepStamina()); //back
+                    else if (angle > 135 && angle <= 225)
+                        player.TryPlayMove(player.GetStepLeft(), player.GetStepStamina()); //left 
+                    else if (angle > 225 && angle <= 315)
+                        player.TryPlayMove(player.GetStepForward(), player.GetStepStamina()); // front
+                    break;
+                }
+            case 90:
+                if (angle >= 315 || angle <= 45)
+                    player.TryPlayMove(player.GetStepForward(), player.GetStepStamina());
+                else if (angle > 45 && angle <= 135)
+                    player.TryPlayMove(player.GetStepRight(), player.GetStepStamina());
+                else if (angle > 135 && angle <= 225)
+                    player.TryPlayMove(player.GetStepBack(), player.GetStepStamina());
+                else if (angle > 225 && angle <= 315)
+                    player.TryPlayMove(player.GetStepLeft(), player.GetStepStamina());
+                break;
+            case 180:
+                if (angle >= 315 || angle <= 45)
+                    player.TryPlayMove(player.GetStepLeft(), player.GetStepStamina()); // left
+                else if (angle > 45 && angle <= 135)
+                    player.TryPlayMove(player.GetStepForward(), player.GetStepStamina()); // front
+                else if (angle > 135 && angle <= 225)
+                    player.TryPlayMove(player.GetStepRight(), player.GetStepStamina()); //right
+                else if (angle > 225 && angle <= 315)
+                    player.TryPlayMove(player.GetStepBack(), player.GetStepStamina()); //back
+                break;
+            case 270:
+                if (angle >= 315 || angle <= 45)
+                    player.TryPlayMove(player.GetStepBack(), player.GetStepStamina()); //back
+                else if (angle > 45 && angle <= 135)
+                    player.TryPlayMove(player.GetStepLeft(), player.GetStepStamina()); //left
+                else if (angle > 135 && angle <= 225)
+                    player.TryPlayMove(player.GetStepForward(), player.GetStepStamina()); //front
+                else if (angle > 225 && angle <= 315)
+                    player.TryPlayMove(player.GetStepRight(), player.GetStepStamina()); //right
+                break;
+        }
+        
     }
 }
