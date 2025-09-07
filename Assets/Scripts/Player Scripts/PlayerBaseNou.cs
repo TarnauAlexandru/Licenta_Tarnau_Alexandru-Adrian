@@ -60,6 +60,11 @@ public abstract class PlayerBaseNou : MonoBehaviour
 
     }
 
+    public void TestAnimation(string Animtrigger)
+    {
+        animator.SetTrigger(Animtrigger);
+    }
+
     protected virtual void Update()
     {
         if (CanRegenerateStamina())
