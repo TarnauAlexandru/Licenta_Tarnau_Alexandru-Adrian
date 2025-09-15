@@ -207,6 +207,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pivot180"",
+                    ""type"": ""Button"",
+                    ""id"": ""8eb79a9c-910d-41d1-bd9f-4bd44f2542e0"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -484,6 +493,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""PivotRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""df5baf75-955f-4078-83e4-12018c9b9ac5"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pivot180"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -565,6 +585,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_BlockLeft = m_Player.FindAction("BlockLeft", throwIfNotFound: true);
         m_Player_BlockCenter = m_Player.FindAction("BlockCenter", throwIfNotFound: true);
         m_Player_Taunt = m_Player.FindAction("Taunt", throwIfNotFound: true);
+        m_Player_Pivot180 = m_Player.FindAction("Pivot180", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Select = m_UI.FindAction("Select", throwIfNotFound: true);
@@ -663,6 +684,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_BlockLeft;
     private readonly InputAction m_Player_BlockCenter;
     private readonly InputAction m_Player_Taunt;
+    private readonly InputAction m_Player_Pivot180;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -726,6 +748,10 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Taunt".
         /// </summary>
         public InputAction @Taunt => m_Wrapper.m_Player_Taunt;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Pivot180".
+        /// </summary>
+        public InputAction @Pivot180 => m_Wrapper.m_Player_Pivot180;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -791,6 +817,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Taunt.started += instance.OnTaunt;
             @Taunt.performed += instance.OnTaunt;
             @Taunt.canceled += instance.OnTaunt;
+            @Pivot180.started += instance.OnPivot180;
+            @Pivot180.performed += instance.OnPivot180;
+            @Pivot180.canceled += instance.OnPivot180;
         }
 
         /// <summary>
@@ -841,6 +870,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Taunt.started -= instance.OnTaunt;
             @Taunt.performed -= instance.OnTaunt;
             @Taunt.canceled -= instance.OnTaunt;
+            @Pivot180.started -= instance.OnPivot180;
+            @Pivot180.performed -= instance.OnPivot180;
+            @Pivot180.canceled -= instance.OnPivot180;
         }
 
         /// <summary>
@@ -1092,6 +1124,13 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnTaunt(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Pivot180" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnPivot180(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "UI" which allows adding and removing callbacks.

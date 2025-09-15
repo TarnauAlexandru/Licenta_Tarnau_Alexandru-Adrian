@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+﻿
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -49,17 +49,9 @@ public class MenuManager : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene(MenuManager.returnMenu);
     }
 
-    /*public void UpdateUIBasedOnSelection()
-    {
-        if (MenuManager.selectingSlot == "Player" && MenuManager.playerIndex != -1)
-            playerPanelUI.UpdateStats(listaBoxeri[MenuManager.playerIndex]);
-        else if (MenuManager.selectingSlot == "CPU" && MenuManager.cpuIndex != -1)
-            cpuPanelUI.UpdateStats(listaBoxeri[MenuManager.cpuIndex]);
-    }*/
-
     public void GoToMainMenu() 
     { 
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Main Menu");
         player1Index = 0;
         player2Index = 0;
         playerIndex = 0;

@@ -18,7 +18,7 @@ public class AnimationLayers : TestGameLoader
         yield return SceneManager.LoadSceneAsync("test");
         yield return null;
 
-        yield return new WaitForSeconds(1f); // Așteaptă un cadru pentru a te asigura că scena este încărcată complet
+        yield return new WaitForSeconds(1f); 
 
         loader = GameObject.FindObjectOfType<TestGameLoader>();
         Assert.IsNotNull(loader, "TestGameLoader not found!");
@@ -28,7 +28,7 @@ public class AnimationLayers : TestGameLoader
         player = loader.p1;
         opponent = loader.op;
 
-        yield return new WaitForSeconds(1f); // Așteaptă un cadru pentru a te asigura că scena este încărcată complet
+        yield return new WaitForSeconds(1f); 
 
     }
 

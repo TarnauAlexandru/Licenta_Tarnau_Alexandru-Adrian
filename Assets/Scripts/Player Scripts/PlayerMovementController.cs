@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,17 +6,32 @@ public class PlayerMovementController : MonoBehaviour
     private PlayerInput playerInput;
     protected Vector2 moveInput;
     [HideInInspector] public PlayerBaseNou player;
+    bool canperformstep = false;
 
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
         player = GetComponent<PlayerBaseNou>();
 
-        playerInput.actions["Move"].performed += OnMove;
-        playerInput.actions["Move"].canceled += OnMove;
+        //playerInput.actions["Move"].performed += OnMove;
+        //playerInput.actions["Move"].canceled += OnMove;
+
+        playerInput.actions["Move"].performed += ctx => {
+            moveInput = ctx.ReadValue<Vector2>();
+            canperformstep = true;
+            HandleMovement();
+        };
+
+        playerInput.actions["Move"].canceled += ctx => {
+            moveInput = Vector2.zero;
+            HandleMovement();
+            canperformstep = false;
+        };
+
 
         playerInput.actions["PivotLeft"].performed += OnPivotLeft;
         playerInput.actions["PivotRight"].performed += OnPivotRight;
+        playerInput.actions["Pivot180"].performed += OnPivot;
     }
 
     private void Update()
@@ -30,7 +44,7 @@ public class PlayerMovementController : MonoBehaviour
     {
         UnityEngine.Debug.Log($"[{gameObject.name}] OnMove - player: {player} ({(player != null ? player.GetType().Name : "NULL")})", this);
         moveInput = context.ReadValue<Vector2>();
-        HandleMovement();
+        
     }
 
     public void OnPivotLeft(InputAction.CallbackContext context)
@@ -48,11 +62,20 @@ public class PlayerMovementController : MonoBehaviour
  
     }
 
+    public void OnPivot(InputAction.CallbackContext context)
+    {
+        UnityEngine.Debug.Log($"[{gameObject.name}] OnPivotRight - player: {player} ({(player != null ? player.GetType().Name : "NULL")})", this);
+        if (context.performed)
+            player.TryPlayPivot(player.GetPivot(), player.GetPivotStamina());
+
+    }
+
     protected void HandleMovement()
     {
         UnityEngine.Debug.Log($"[{gameObject.name}] HandleMovement - player: {player} ({(player != null ? player.GetType().Name : "NULL")})", this);
         float magnitude = moveInput.magnitude;
-        if (magnitude < 0.1f) return;
+        if (magnitude < 0.8f) return;
+        if (!canperformstep) return;
 
         float angle = Mathf.Atan2(moveInput.x, moveInput.y) * Mathf.Rad2Deg;
         if (angle < 0) angle += 360;

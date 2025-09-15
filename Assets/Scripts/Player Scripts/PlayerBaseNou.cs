@@ -1,11 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Xml.Serialization;
-using UnityEditor;
-using UnityEditor.Experimental;
 using System;
 using UnityEngine;
-using Unity.IO.LowLevel.Unsafe;
-using Unity.Services.Authentication;
 using Unity.Services.Core;
 using Unity.Services.Analytics;
 
@@ -42,12 +37,22 @@ public abstract class PlayerBaseNou : MonoBehaviour
     static bool s_roundStarted = false;
     static float s_roundStartTime = 0f;
 
+    private AudioSource sfx;
+
+    public AudioClip punchClip;
+    public AudioClip koClip;
+
 
     public virtual void Awake()
     {
         currentHealth = maxHealth;
         currentStamina = maxStamina;
         animator = GetComponent<Animator>();
+
+        sfx = GetComponent<AudioSource>();
+        if (sfx == null)
+            sfx = gameObject.AddComponent<AudioSource>();
+
         PushHealth();
         PushStamina();
 
@@ -59,6 +64,12 @@ public abstract class PlayerBaseNou : MonoBehaviour
         }
 
     }
+
+    public void playpunchsound()
+    { sfx.PlayOneShot(punchClip); }
+
+    public void playkosound()
+    { sfx.PlayOneShot(koClip); }
 
     public void TestAnimation(string Animtrigger)
     {
@@ -164,6 +175,7 @@ public abstract class PlayerBaseNou : MonoBehaviour
 
     public virtual void TakeHit(PlayerBaseNou attacker, float regionMultiplier, bool isCrit)
     {
+        playpunchsound();
         float damage;
         if (isCrit)
         {
@@ -195,6 +207,7 @@ public abstract class PlayerBaseNou : MonoBehaviour
         winnerstatus = false;
         opponent.winnerstatus = true;
         animator.SetTrigger("Defeated");
+        playkosound();
 
         MultiplayerGameResult.WinnerIndex = opponent.spawnindex;
         MultiplayerGameResult.LoserIndex = this.spawnindex;
@@ -211,7 +224,7 @@ public abstract class PlayerBaseNou : MonoBehaviour
 
     private System.Collections.IEnumerator WaitAndLoadGameOver()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(4f);
         UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
     }
 
@@ -470,6 +483,7 @@ public abstract class PlayerBaseNou : MonoBehaviour
     // Anim trigger/costuri abstracte
     public abstract string GetPivotLeft();
     public abstract string GetPivotRight();
+    public abstract string GetPivot();
     public abstract string GetBlockLeft();
     public abstract string GetBlockRight();
     public abstract string GetBlockCenter();

@@ -121,6 +121,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Pivot180",
+                    "type": "Button",
+                    "id": "8eb79a9c-910d-41d1-bd9f-4bd44f2542e0",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -396,6 +405,17 @@
                     "processors": "",
                     "groups": ";GamepadScheme",
                     "action": "PivotRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "df5baf75-955f-4078-83e4-12018c9b9ac5",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pivot180",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

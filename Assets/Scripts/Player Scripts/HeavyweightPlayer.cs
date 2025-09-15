@@ -11,6 +11,7 @@ public class HeavyweightPlayer : PlayerBaseNou
 
     public override string GetPivotLeft() => "Pivot Left";
     public override string GetPivotRight() => "Pivot Right";
+    public override string GetPivot() => "Pivot";
     public override string GetBlockLeft() => "Block Left";
     public override string GetBlockRight() => "Block Right";
     public override string GetBlockCenter() => "Block Center";

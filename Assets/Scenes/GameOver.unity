@@ -1582,7 +1582,7 @@ MonoBehaviour:
   - {fileID: 2183812321159470997, guid: 9e0c20b7192ab584cad5d47b9f8a935b, type: 3}
   - {fileID: 2972043624938470820, guid: dbe7042d8403b304b926078504f87c37, type: 3}
   player1SpawnPoint: {fileID: 1150690391}
-  player2SpawnPoint: {fileID: 316807693}
+  player2SpawnPoint: {fileID: 1701229435}
 --- !u!1 &1701229434
 GameObject:
   m_ObjectHideFlags: 0

@@ -112,7 +112,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.13572818
+  m_Radius: 0.18
   m_Height: 0.4
   m_Direction: 1
   m_Center: {x: 4.337345e-13, y: -5.0473115e-10, z: 0.027054727}
@@ -558,8 +558,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.120012775
-  m_Height: 0.29552668
+  m_Radius: 0.1400128
+  m_Height: 0.3955267
   m_Direction: 1
   m_Center: {x: -2.5299374e-11, y: 0.09776336, z: 0.03969845}
 --- !u!114 &8623673217537261235
@@ -626,7 +626,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.1
+  m_Radius: 0.13
   m_Center: {x: 0, y: 0.15, z: 0}
 --- !u!114 &8219329819196264280
 MonoBehaviour:
@@ -882,7 +882,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.1
+  m_Radius: 0.13
   m_Center: {x: 0, y: 0.15, z: 0}
 --- !u!1 &7431149078116745301
 GameObject:
@@ -1195,7 +1195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 93f85502aadd6254bab36a0b04ff58b6, type: 3}
       propertyPath: m_Name
-      value: Nikolas Danilovic
+      value: Ronald Reynolds
       objectReference: {fileID: 0}
     - target: {fileID: 2916570863362053800, guid: 93f85502aadd6254bab36a0b04ff58b6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1466,6 +1466,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 51935309-3e6f-4f2e-bc20-113be55dd7c9
     m_ActionName: 'UI/Navigate[/XInputControllerWindows/leftStick]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8eb79a9c-910d-41d1-bd9f-4bd44f2542e0
+    m_ActionName: Player/Pivot180
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: GamepadScheme
   m_DefaultActionMap: Player
@@ -1505,6 +1509,12 @@ MonoBehaviour:
   critChance: 0
   critMultiplier: 1.5
   isCrit: 0
+  spawnindex: 0
+  winnerstatus: 0
+  opponent: {fileID: 0}
+  opponentSet: 0
+  punchClip: {fileID: 8300000, guid: 3a9063004ef3e1447a140ba3e62e2201, type: 3}
+  koClip: {fileID: 8300000, guid: db547cc2ca6dbc3458123eb2958f7584, type: 3}
 --- !u!143 &602479595014878023
 CharacterController:
   m_ObjectHideFlags: 0

@@ -442,7 +442,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.10315342
+  m_Radius: 0.1531534
   m_Center: {x: 0.0000000070481536, y: 0.19315344, z: -0.0000000064142265}
 --- !u!114 &415629867442208979
 MonoBehaviour:
@@ -711,7 +711,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.11218259
+  m_Radius: 0.15
   m_Center: {x: 0.0000000137964, y: 0.22746173, z: -0.000000008640494}
 --- !u!114 &3152594337393988242
 MonoBehaviour:
@@ -778,8 +778,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.09418603
-  m_Height: 0.26087844
+  m_Radius: 0.13
+  m_Height: 0.4
   m_Direction: 1
   m_Center: {x: -1.2959276e-11, y: 0.10087836, z: 0.058320362}
 --- !u!114 &6754925079181074407
@@ -912,8 +912,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.13612428
-  m_Height: 0.4
+  m_Radius: 0.18
+  m_Height: 0.5
   m_Direction: 1
   m_Center: {x: 0.0063056955, y: -0.049999997, z: 0.037408948}
 --- !u!114 &3233731555650615330
@@ -1153,6 +1153,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 51935309-3e6f-4f2e-bc20-113be55dd7c9
     m_ActionName: 'UI/Navigate[/XInputControllerWindows/leftStick]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8eb79a9c-910d-41d1-bd9f-4bd44f2542e0
+    m_ActionName: Player/Pivot180
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: GamepadScheme
   m_DefaultActionMap: Player
@@ -1179,6 +1183,12 @@ MonoBehaviour:
   critChance: 0
   critMultiplier: 1.5
   isCrit: 0
+  spawnindex: 0
+  winnerstatus: 0
+  opponent: {fileID: 0}
+  opponentSet: 0
+  punchClip: {fileID: 8300000, guid: 3a9063004ef3e1447a140ba3e62e2201, type: 3}
+  koClip: {fileID: 8300000, guid: db547cc2ca6dbc3458123eb2958f7584, type: 3}
 --- !u!143 &6060014195374015401
 CharacterController:
   m_ObjectHideFlags: 0
